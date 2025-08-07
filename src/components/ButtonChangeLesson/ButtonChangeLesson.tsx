@@ -169,7 +169,7 @@ const ButtonChangeLesson = ({
             </div>
           </div>
 
-          {downloadableFile && (
+          {/* {downloadableFile && (
             <a
               href={downloadableFile}
               // download
@@ -181,6 +181,18 @@ const ButtonChangeLesson = ({
                 <FileDown className="h-3 w-3" />
               </div>
               <div className='flex-1'><span className="text-sm dark:text-white text-black">Material de estudio - clase {lessonIndex + 1}</span></div>
+            </a>
+          )} */}
+
+          {downloadableFile && (
+            <a
+              href={`https://docs.google.com/gview?url=${encodeURIComponent(downloadableFile)}&embedded=true`}
+              rel="noopener noreferrer"
+              className="flex gap-3 pl-3 py-1 dark:hover:bg-muted hover:bg-[#E0EAF3] w-full items-center text-gray-400 font-thin"
+              target="_blank"
+            >
+              <FileDown size={15} />
+              <span className="text-[12px]">Material de estudio - clase {lessonIndex + 1}</span>
             </a>
           )}
         </div>
@@ -210,10 +222,22 @@ const ButtonChangeLesson = ({
             </div>
           </div>
 
+          {/* {downloadableFile && (
+            // <a
+            //   href={downloadableFile}
+            //   // download
+            //   rel="noopener noreferrer"
+            //   className="flex gap-3 pl-3 py-1 dark:hover:bg-muted hover:bg-[#E0EAF3] w-full items-center text-gray-400 font-thin"
+            //   target="_blank"
+            // >
+            //   <FileDown size={15} />
+            //   <span className="text-[12px]">Material de estudio - clase {lessonIndex + 1}</span>
+            // </a>
+              )} */}
+
           {downloadableFile && (
             <a
-              href={downloadableFile}
-              // download
+              href={`https://docs.google.com/gview?url=${encodeURIComponent(downloadableFile)}&embedded=true`}
               rel="noopener noreferrer"
               className="flex gap-3 pl-3 py-1 dark:hover:bg-muted hover:bg-[#E0EAF3] w-full items-center text-gray-400 font-thin"
               target="_blank"
@@ -222,6 +246,7 @@ const ButtonChangeLesson = ({
               <span className="text-[12px]">Material de estudio - clase {lessonIndex + 1}</span>
             </a>
           )}
+
         </div>
       )}
     </>
