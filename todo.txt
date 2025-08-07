@@ -1,0 +1,140 @@
+################### Mercado Pago ###################
+
+MP_ACCESS_TOKEN=APP_USR-5510092886901831-042310-dac428ba1eb7dd873ba80e4366cd9c11-1312676720
+
+fmd:
+CUENTA CON LA QUE ME LOGUIE EN LA WEB DE MERCADO PAGO:
+TEST_USER_1312676720@testuser.com
+UD3s5Bp6Z6
+
+## LOGEAR EN MERCADOPAGO CON ESTA CUENTA EN NAVEGADOR PRIVADO DE CHROME LIBRE DE COOKIES - INTENTAR VARIAS VECES SI TIRA ERROR EL BOTON
+CUENTA CON LA QUE HAGO LOS TESTS:
+TEST_USER_1312675864@testuser.com
+dkdrCtR0pu
+
+TARJETA MASTERCARD DE CREDITO:
+5031 7557 3453 0604
+11/30
+
+################### PayPal ###################
+
+cuenta para cancelar suscripcion
+usuario: sb-54ulr37372155@business.example.com
+pass: H(e1>ytN
+
+usuario: sb-44hzu34707043@business.example.com
+pass: 7H(<)mrY
+
+sb-dxv8r27205884@personal.example.com
+Ke97m$V5
+
+################### MERG ###################
+
+Si no me deja hacer push al dev desde dev:
+git pull --rebase origin dev
+git push origin dev
+
+### Rebase ###
+git checkout dev
+git rebase ramajero-3
+git push origin dev
+
+Si hay conflictos despues del rebase:
+git add .
+git rebase --continue
+git commit -m "Resueltos conflictos en merge de ramajero-3 a dev"
+git push origin dev
+
+Para abortar el rebase:
+git rebase --abort  # Si estabas en un rebase
+git merge --abort   # Si estabas en un merge
+
+### Push ###
+
+git add .
+git commit -m "Descripción de los cambios"
+git checkout dev
+git merge @franv1-paypal-final
+git push origin dev
+
+git fetch origin
+git merge origin/ramajero-40 o git merge origin/ramajero-18 --allow-unrelated-histories
+git push origin dev
+
+Si hubo conflicto:
+
+git add .
+git commit -m "Resolve merge conflicts between dev and ramajero-40"
+git push origin dev
+
+
+################### REVALIDACIONES ###################
+
+En:
+src\app\api\admin\categories\new\route.ts OK
+src\app\api\admin\categories\delete\[id]\route.ts OK
+Revalidar:
+src\app\api\admin\categories\route.ts
+
+En:
+src\app\api\cursos\nuevo-curso\route.ts OK
+src\app\api\cursos\course-by-id\[id]\route.ts (PUT Y DELETE) OK
+Revalidar:
+src\app\api\cursos\get-courses\route.ts
+src\app\api\admin\get-title-courses\route.ts
+
+En:
+src\app\api\live-lesson\delete-lesson\[id]\route.ts (DELETE) OK
+src\app\api\live-lesson\new\route.ts OK
+src\app\api\live-lesson\update-lesson\[id]\route.ts (PUT) OK
+Revalidar:
+src\app\api\live-lesson\get-lessons\route.ts
+
+En:
+src\app\api\orders\new\route.ts
+src\app\api\admin\offline-payment\course\route.ts
+Revalidar:
+El get viene desde SSR
+
+En:
+src\app\api\orders\paypal\new\route.ts
+src\app\api\admin\offline-payment\suscription\route.ts
+Revalidar:
+El get viene desde SSR
+
+En:
+src\app\api\orders\suscription\route.ts
+Revalidar:
+El get viene desde SSR
+
+En:
+src\app\api\admin\exchange-rate\route.ts (PUT) OK
+Revalidar:
+src\app\api\admin\exchange-rate\route.ts
+
+En:
+src\app\api\admin\remove-user-course\[id]\route.ts
+Revalidar?
+
+
+################### TODO ###################
+
+No se estan usando loas siguientes apis:
+
+src\app\api\admin\delete-suscription-to-user
+
+Usar la utilidad de hasSubscription en:
+
+C:\Users\PC Franco\Desktop\finanflix-produccion\src\app\api\discord\callback\route.ts x2
+
+Refactorización a futuro:
+
+Evitar usar la api https://api.vimeo.com/videos/${videoId} (tarda mucho en responder)
+
+Y en su lugar pasar por prop duration desde el componente de VimeoClaseVivo / VImeoPlayer al componente padre
+
+const [duration, setDuration] = useState(0);
+
+vimeoPlayer.getDuration().then(duration => {
+        setDuration(duration);
+      });

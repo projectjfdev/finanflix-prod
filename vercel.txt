@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/trading-pro",
+      "schedule": "0 10 * * *"
+    },
+    {
+      "path": "/api/cron/rol-expired-subscription",
+      "schedule": "0 10 * * *"
+    },
+    {
+      "path": "/api/cron/rol-expired-courses",
+      "schedule": "0 10 * * *"
+    }
+  ]
+}
