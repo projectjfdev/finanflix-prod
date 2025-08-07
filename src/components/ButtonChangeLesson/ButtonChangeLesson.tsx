@@ -149,8 +149,8 @@ const ButtonChangeLesson = ({
             key={key}
             onClick={handleButtonClickVideo}
             className={`flex items-center p-3 rounded-lg cursor-pointer transition ${isActive
-                ? 'bg-primary/10 border-l-4 border-primary'
-                : 'dark:hover:bg-muted hover:bg-[#E0EAF3] '
+              ? 'bg-primary/10 border-l-4 border-primary'
+              : 'dark:hover:bg-muted hover:bg-[#E0EAF3] '
               }`}
           >
             <div className="bg-[#4527A0] text-white rounded-lg p-2 mr-3 flex items-center justify-center">
@@ -172,7 +172,8 @@ const ButtonChangeLesson = ({
           {downloadableFile && (
             <a
               href={downloadableFile}
-              download
+              // download
+              rel="noopener noreferrer"
               className="flex  p-3 py-1 dark:hover:bg-muted hover:bg-[#E0EAF3] items-center text-gray-400 font-thin "
               target="_blank"
             >
@@ -189,8 +190,8 @@ const ButtonChangeLesson = ({
             key={lessonIndex}
             onClick={handleButtonClickPDF}
             className={`flex items-center p-3 rounded-lg cursor-pointer transition ${isActive
-                ? 'bg-primary/10 border-l-4 border-primary'
-                : 'dark:hover:bg-muted hover:bg-[#E0EAF3]'
+              ? 'bg-primary/10 border-l-4 border-primary'
+              : 'dark:hover:bg-muted hover:bg-[#E0EAF3]'
               }`}
           >
             <div className="bg-[#4527A0] text-white rounded-lg p-2 mr-3 flex items-center justify-center">
@@ -212,7 +213,8 @@ const ButtonChangeLesson = ({
           {downloadableFile && (
             <a
               href={downloadableFile}
-              download
+              // download
+              rel="noopener noreferrer"
               className="flex gap-3 pl-3 py-1 dark:hover:bg-muted hover:bg-[#E0EAF3] w-full items-center text-gray-400 font-thin"
               target="_blank"
             >
