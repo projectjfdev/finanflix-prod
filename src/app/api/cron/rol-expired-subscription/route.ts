@@ -144,11 +144,11 @@ export async function GET(req: Request) {
         !(subType === 'Suscripcion basic - mensual' && completedCourses >= 3) // ACA ESTAMOS NEGANDO QUE NO SEA MENSUAL Y TENGA 3 O MAS CURSOS COMPLETADOS, SI ES MENSUAL Y NO TIENE 3 CURS SE EJECUTA
       ) {
         const rolId = sub.rol?.id;
-        // console.log('rolId', rolId);
+        console.log('rolId', rolId);
         console.log('Logica activada');
 
         const rolIdExpired = getRoleIdForExpiredSuscriptions(subType);
-        // console.log('rolIdExpired', rolIdExpired);
+        console.log('rolIdExpired', rolIdExpired);
 
         if (!rolId || !rolIdExpired) continue;
 
