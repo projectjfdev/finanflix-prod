@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/rol-expired-subscription",
+      "schedule": "*/3 * * * *"
+    },
+    {
+      "path": "/api/cron/rol-expired-courses",
+      "schedule": "*/3 * * * *"
+    }
+  ]
+}

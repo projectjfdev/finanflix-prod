@@ -1,0 +1,23 @@
+{
+  "categories": [
+    { "id": 1, "title": "Analisis Fundamental" },
+    { "id": 2, "title": "Curso de Trading" },
+    { "id": 3, "title": "Finanzas personales" },
+    { "id": 4, "title": "Trading Avanzado" },
+    { "id": 5, "title": "Curso de Merval" },
+    { "id": 6, "title": "Programa NFT" },
+    { "id": 7, "title": "Analisis Tecnico" },
+    { "id": 8, "title": "Programa StartZero" }
+  ],
+  "categoriesLiveLessons": [
+    { "id": 1, "title": "Analisis Fundamental" },
+    { "id": 2, "title": "Curso de Trading" },
+    { "id": 3, "title": "Finanzas personales" },
+    { "id": 4, "title": "Trading Avanzado" },
+    { "id": 5, "title": "Curso de Merval" },
+    { "id": 6, "title": "Programa NFT" },
+    { "id": 7, "title": "Analisis Tecnico" },
+    { "id": 8, "title": "Programa StartZero" },
+    { "id": 9, "title": "Sin categoria" }
+  ]
+}

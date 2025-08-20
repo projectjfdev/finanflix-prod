@@ -1,0 +1,13 @@
+{
+  "suscriptionsOptions": [
+    { "id": 1, "title": "Suscripcion basic - Mensual" },
+    { "id": 2, "title": "Suscripcion basic - Semestral" },
+    { "id": 3, "title": "Suscripcion basic - Anual" },
+    { "id": 4, "title": "Suscripcion icon - Mensual" },
+    { "id": 5, "title": "Suscripcion icon - Semestral" },
+    { "id": 6, "title": "Suscripcion icon - Anual" },
+    { "id": 7, "title": "Suscripcion diamond - Mensual" },
+    { "id": 8, "title": "Suscripcion diamond - Semestral" },
+    { "id": 9, "title": "Suscripcion diamond - Anual" }
+  ]
+}
