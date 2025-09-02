@@ -237,10 +237,10 @@ const ModalCourseUpdate = ({ course }: Props) => {
                     value: 80,
                     message: 'El título es demasiado largo. Máximo 80 caracteres',
                   },
-                  minLength: {
-                    value: 2,
-                    message: 'El título debe tener al menos dos caracteres',
-                  },
+                  // minLength: {
+                  //   value: 2,
+                  //   message: 'El título debe tener al menos dos caracteres',
+                  // },
                 })}
                 name="title"
               />
@@ -257,10 +257,10 @@ const ModalCourseUpdate = ({ course }: Props) => {
                     value: 100,
                     message: 'El subtítulo no puede pasar de los 100 caracteres',
                   },
-                  minLength: {
-                    value: 2,
-                    message: 'El subtítulo debe tener al menos 2 caracteres',
-                  },
+                  // minLength: {
+                  //   value: 2,
+                  //   message: 'El subtítulo debe tener al menos 2 caracteres',
+                  // },
                 })}
                 name="subtitle"
               />
@@ -470,10 +470,10 @@ const ModalCourseUpdate = ({ course }: Props) => {
                 <Textarea
                   className="resize-y h-36  dark:bg-card bg-background rounded-[13px] w-80 mb-2 "
                   {...register('description', {
-                    minLength: {
-                      value: 10,
-                      message: 'La descripción debe tener al menos 10 caracteres',
-                    },
+                    // minLength: {
+                    //   value: 10,
+                    //   message: 'La descripción debe tener al menos 10 caracteres',
+                    // },
                   })}
                 />
                 <span className="text-red-600 mb-4">{errors?.description?.message as string}</span>
@@ -499,10 +499,10 @@ const ModalCourseUpdate = ({ course }: Props) => {
                     value: 1000,
                     message: 'El mensaje de bienvenida no puede tener más de 1000 caracteres',
                   },
-                  minLength: {
-                    value: 10,
-                    message: 'El mensaje de bienvenida debe tener al menos 10 caracteres',
-                  },
+                  // minLength: {
+                  //   value: 10,
+                  //   message: 'El mensaje de bienvenida debe tener al menos 10 caracteres',
+                  // },
                 })}
               />
               <label className="mb-2 mt-2 block text-base" htmlFor="congrats">
@@ -516,10 +516,10 @@ const ModalCourseUpdate = ({ course }: Props) => {
                     value: 1000,
                     message: 'El mensaje de felicitaciones no puede tener más de 1000 caracteres',
                   },
-                  minLength: {
-                    value: 10,
-                    message: 'El mensaje de felicitaciones debe tener al menos 10 caracteres',
-                  },
+                  // minLength: {
+                  //   value: 10,
+                  //   message: 'El mensaje de felicitaciones debe tener al menos 10 caracteres',
+                  // },
                 })}
               />
               <Separator className="bg-gray-200 my-4" />
@@ -607,8 +607,8 @@ const ModalCourseUpdate = ({ course }: Props) => {
                                           <span>Video</span>
                                         </div>
                                       ) : watch(
-                                          `sections.${sectionIndex}.lessons.${lessonIndex}.type`
-                                        ) === 'textContent' ? (
+                                        `sections.${sectionIndex}.lessons.${lessonIndex}.type`
+                                      ) === 'textContent' ? (
                                         <div className="flex gap-2">
                                           <FileText />
                                           <span>PDF</span>
@@ -660,8 +660,8 @@ const ModalCourseUpdate = ({ course }: Props) => {
                                   </div>
 
                                   {lessonTypes[sectionIndex]?.[lessonIndex] ===
-                                  undefined ? null : lessonTypes[sectionIndex]?.[lessonIndex] ===
-                                    'textContent' ? (
+                                    undefined ? null : lessonTypes[sectionIndex]?.[lessonIndex] ===
+                                      'textContent' ? (
                                     <>
                                       <div className="pb-3">
                                         <Button
