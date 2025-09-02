@@ -1,6 +1,6 @@
 import { IBannerTop } from "@/interfaces/bannerTop";
 import mongoose, { Schema } from "mongoose";
-// asd
+// asda
 const bannerTopSchema = new Schema<IBannerTop>(
   {
     title: { type: String },
