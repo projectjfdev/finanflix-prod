@@ -571,7 +571,7 @@ const ModalCourseUpdate = ({ course }: Props) => {
                             {watch(`sections.${sectionIndex}.lessons`)?.map(
                               (lesson: any, lessonIndex: number) => (
                                 <div
-                                  key={lesson._id}
+                                  key={lesson.id || lesson._id.toString()}
                                   className="border px-2 md:px-3 rounded"
                                   draggable
                                   onDragStart={e =>
